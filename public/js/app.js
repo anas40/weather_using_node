@@ -22,7 +22,7 @@ weatherForm.addEventListener('submit', (event) => {
     messageTwo.textContent = ""
     
     //location encoded to URI in geocode so no need to do again 
-    fetch('http://localhost:3000/weather?search=' + location).then((response) => {
+    fetch('/weather?search=' + location).then((response) => {
         //parsing the data to json
         response.json().then((data) => {
             if (data.error) {
