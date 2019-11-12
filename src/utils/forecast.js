@@ -13,7 +13,7 @@ const forecast = (latitude, longitude, callback) => {
             callback("Unable to find",undefined);
         } else {
             const {temperature,precipProbability} = body.currently;
-            callback(undefined,`${body.daily.data[0].summary} It is currently ${temperature}C out there.There id ${precipProbability}% probability of rain.`);
+            callback(undefined,`${body.daily.data[0].summary} It is currently ${temperature}C out there.There id ${precipProbability}% probability of rain. ${body.daily.summary}`);
         }
     });
 }
